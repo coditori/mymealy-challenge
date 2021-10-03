@@ -1,12 +1,12 @@
 # mymealy-challenge
 ## Front-End Challenge:
 Piter (Marketing guy) asked you to implement a cryptocurrency live pricing application, he needs two core features:
-1- List of cryptos sorted by price
-2- A search widget to search on the list of cryptos (searching BTC returns all cryptos with BTC inside their name, like BTCUSDT, BTCETH, ...)
+1. List of cryptos sorted by price
+2. A search widget to search on the list of cryptos (searching BTC returns all cryptos with BTC inside their name, like BTCUSDT, BTCETH, ...)
 
 Please use technology of your choice:
-	- If you are a web developer you can use: ReactJS/AngularJS/VueJS
-	- And for mobile you can use Android/iOS/Flutter/ReactNative
+- If you are a web developer you can use: ReactJS/AngularJS/VueJS
+- And for mobile you can use Android/iOS/Flutter/ReactNative
 
 Data Source:
 	Take a look at the Binance API documentation link for more information about your source
