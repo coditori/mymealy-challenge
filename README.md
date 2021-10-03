@@ -9,16 +9,16 @@ Please use technology of your choice:
 	- And for mobile you can use Android/iOS/Flutter/ReactNative
 
 Data Source:
-	Take a look at the below Binance API documentation link for more information about your source
+	Take a look at the Binance API documentation link for more information about your source
 	https://github.com/binance/binance-spot-api-docs/blob/master/web-socket-streams.md#all-market-tickers-stream
 
 ## Back-End Challenge:
 We need to provide a RESTful API for front-ends to:
-- Get bitcoin-usd rate periodically (based on the config, as an example BTCETH) then show the rate in the response of "rates" endpoint.
-- Return the history of specified coin (as an example BTCETH). It also needs to have "startTime", "endTime" as two filtered params.
+- Get bitcoin-usd rate periodically (based on the config) then show the rate in the response of "rates" endpoint.
+- Return the rate history of specified coin "bitcoin-usd", It also needs to have "startTime", "endTime" as two filtered params.
 
 Data Source:
-	Take a look at the below Binance API documentation link for more information about your source
+	Take a look at the Binance API documentation link for more information about your source
 	https://github.com/binance/binance-spot-api-docs/blob/master/rest-api.md
 
 ## Tips:
