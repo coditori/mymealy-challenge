@@ -22,11 +22,11 @@ Data Source:
 	https://github.com/binance/binance-spot-api-docs/blob/master/rest-api.md
 
 ## Tips:
-	- There is no rush to finish the project you have 1 week to finish it (you can ask for an extend if needed)
-	- The project should work and deliver the core features and we also consider clean code
+  - There is no rush to finish the project you have 1 week to finish it (you can ask for an extend if needed)
+  - The project should work and deliver the core features and we also consider clean code
   - Please provide a good documentation
   - We appreciate TDD
 
 ## How to deliver the project?
-	Please fork this repo and send a pull request whenever you are done
+Please fork this repo and send a pull request whenever you are done
   
