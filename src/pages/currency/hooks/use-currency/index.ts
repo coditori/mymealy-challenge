@@ -5,7 +5,7 @@ export const useCurrency = (): IUseCurrencies => {
   const [filter, setFilter] = useState('')
 
   const { sendJsonMessage, lastJsonMessage, readyState } = useWebSocket(
-    ' wss://stream.binance.com:9443/ws'
+    'wss://stream.binance.com:9443/ws'
   )
 
   useEffect(() => {

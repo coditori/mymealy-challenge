@@ -1,38 +1,35 @@
 import { renderHook, act } from '@testing-library/react-hooks'
-
+import WS from 'jest-websocket-mock'
 import { useCurrency } from '..'
 
-describe('Use user hook', () => {
-  afterEach(() => jest.resetAllMocks())
+const subscribeMsg = {
+  method: 'SUBSCRIBE',
+  params: ['!miniTicker@arr'],
+  id: 1,
+}
 
-  it('Should render proper data', async () => {
-    // service.mockResolvedValueOnce(mockData)
-    // const { result, waitFor } = renderHook(() => useCurrency())
-    // expect(result.current.loading).toBeTruthy()
-    // await waitFor(() => !result.current.loading)
-    // expect(service).toHaveBeenCalledTimes(1)
-    // expect(result.current.data).toBe(mockData)
+let server
+
+beforeEach(() => {
+  server = new WS('wss://stream.binance.com:9443/ws')
+})
+afterEach(() => {
+  WS.clean()
+})
+
+describe('Use currency hook', () => {
+  it('Should subscribe to web socket', async () => {
+    const { result } = renderHook(() => useCurrency())
+    jest.spyOn(console, 'error').mockImplementation(jest.fn())
+    await server.connected
+    await expect(server).toReceiveMessage(JSON.stringify(subscribeMsg))
+    expect(server).toHaveReceivedMessages([JSON.stringify(subscribeMsg)])
   })
-  it('Should refetch proper data and catch the diff between country and img', async () => {
-    // service.mockResolvedValueOnce(mockData)
-    // const { result, waitFor, waitForNextUpdate } = renderHook(() =>
-    //   useCurrency()
-    // )
-    // await waitFor(() => !result.current.loading)
-    // expect(result.current.cache).toBe(undefined)
-    // jest.resetAllMocks()
-    // service.mockResolvedValueOnce(mockNewData)
-    // act(() => result.current.refetch())
-    // jest.spyOn(console, 'error').mockImplementation(jest.fn())
-    // expect(result.current.fetching).toBeTruthy()
-    // await waitForNextUpdate()
-    // expect(result.current.cache).toBe(mockData)
-    // expect(result.current.data).toBe(mockNewData)
-    // expect(result.current.isNew).toStrictEqual({
-    //   country: true,
-    //   first: false,
-    //   img: true,
-    //   last: false,
-    // })
+  it('Should setFilter properly', async () => {
+    const { result } = renderHook(() => useCurrency())
+    jest.spyOn(console, 'error').mockImplementation(jest.fn())
+    expect(result.current.filter).toBe('')
+    act(() => result.current.onFilter('BTC'))
+    expect(result.current.filter).toBe('BTC')
   })
 })

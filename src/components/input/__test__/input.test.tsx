@@ -1,21 +1,30 @@
 import { render, screen } from '@testing-library/react'
+import event from '@testing-library/user-event'
+import { useState } from 'react'
 import { Input } from '..'
+
+const MockInput = () => {
+  const [state, setstate] = useState('')
+  return (
+    <Input
+      placeholder="Search"
+      value={state}
+      onChange={(value) => setstate(value)}
+    />
+  )
+}
 
 describe('Input core', () => {
   it('Should render properly', () => {
-    render(<Input label="name" value="test value" />)
-    const element = screen.getByTestId('name')
-    expect(element).toBeInTheDocument()
-    expect(element).toHaveValue('test value')
+    render(<Input placeholder="Search" value="BTC" />)
+    const element = screen.getByPlaceholderText(/search/i)
+    expect(element).toBeVisible()
+    expect(element).toHaveValue('BTC')
   })
-  it('Should render loading properly', () => {
-    render(<Input label="name" value="test value" loading />)
-    const element = screen.getByTestId('name')
-    expect(element).toHaveClass('animate-pulse')
-  })
-  it('Should render highlight properly', () => {
-    render(<Input label="name" value="test value" isNew />)
-    const element = screen.getByTestId('name')
-    expect(element).toHaveClass('bg-blue-300 shadow-3xl-blue')
+  it('Should change properly', () => {
+    render(<MockInput />)
+    const element = screen.getByPlaceholderText(/search/i)
+    event.type(element, 'BSD')
+    expect(element).toHaveValue('BSD')
   })
 })

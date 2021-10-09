@@ -54,6 +54,7 @@
     "jest": "^27.0.6",
     "jest-websocket-mock": "^2.2.1",
     "mini-css-extract-plugin": "^2.0.0",
+    "mock-socket": "^9.0.5",
     "nock": "^13.1.1",
     "postcss": "^8.3.5",
     "postcss-loader": "^6.1.0",

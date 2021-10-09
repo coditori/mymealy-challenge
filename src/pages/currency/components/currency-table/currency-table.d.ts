@@ -1,0 +1,3 @@
+interface ICurrencyTable {
+  currencies: TCurrency[]
+}
