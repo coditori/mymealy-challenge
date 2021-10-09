@@ -1,7 +1,7 @@
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import useWebSocket from 'react-use-websocket'
 
-export const useCurrency = () => {
+export const useCurrency = (): IUseCurrencies => {
   const [filter, setFilter] = useState('')
 
   const { sendJsonMessage, lastJsonMessage, readyState } = useWebSocket(
@@ -18,14 +18,14 @@ export const useCurrency = () => {
 
   return {
     filter,
-    lastJsonMessage,
     onFilter: useCallback((value) => setFilter(value), []),
     currencies:
-      lastJsonMessage.length &&
-      lastJsonMessage
-        .filter((item) =>
-          filter ? item.s.toLowerCase().includes(filter) : true
-        )
-        .sort((a, b) => (parseFloat(a.c) < parseFloat(b.c) ? 1 : -1)),
+      lastJsonMessage && lastJsonMessage.length
+        ? lastJsonMessage
+            .filter((item) =>
+              filter ? item.s.toLowerCase().includes(filter) : true
+            )
+            .sort((a, b) => (parseFloat(a.c) < parseFloat(b.c) ? 1 : -1))
+        : [],
   }
 }
