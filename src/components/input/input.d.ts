@@ -1,7 +1,5 @@
 interface IInput {
   value?: string
-  label?: string
-  loading?: boolean
-  fetching?: boolean
-  isNew?: boolean
+  placeholder?: string
+  onChange?: ChangeEventHandler<HTMLInputElement>
 }
