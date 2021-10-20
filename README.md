@@ -6,7 +6,6 @@ Piter (Marketing guy) asked you to implement a cryptocurrency live pricing appli
 
 Please use technology of your choice:
 - If you are a web developer you can use: ReactJS/AngularJS/VueJS
-- And for mobile you can use Android/iOS/Flutter/ReactNative
 
 Data Source:
 	Take a look at the Binance API documentation link for more information about your source
