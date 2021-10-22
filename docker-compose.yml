@@ -1,0 +1,10 @@
+version: '3'
+services:
+  mysql:
+    container_name: mymealy_mysql
+    build: mysql/
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: mymealy
+      MYSQL_ROOT_PASSWORD: 123456
