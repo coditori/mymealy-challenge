@@ -1,31 +1,42 @@
-# mymealy-challenge
-## Front-End Challenge:
-Piter (Marketing guy) asked you to implement a cryptocurrency live pricing application, he needs two core features:
-1. List of cryptos sorted by price
-2. A search widget to search on the list of cryptos (searching BTC returns all cryptos with BTC inside their name, like BTCUSDT, BTCETH, ...)
+# MyMealy Challenge
 
-Please use technology of your choice:
-- If you are a web developer you can use: ReactJS/AngularJS/VueJS
+### Start project
 
-Data Source:
-	Take a look at the Binance API documentation link for more information about your source
-	https://github.com/binance/binance-spot-api-docs/blob/master/web-socket-streams.md#all-market-tickers-stream
+In order to run project
+```> start.sh```
 
-## Back-End Challenge:
-We need to provide a RESTful API for front-ends to:
-- Get bitcoin-usd rate periodically (based on the config) then show the rate in the response of "rates" endpoint.
-- Return the rate history of specified coin "bitcoin-usd", It also needs to have "startTime", "endTime" as two filtered params.
+### Reference Doc
 
-Data Source:
-	Take a look at the Binance API documentation link for more information about your source
-	https://github.com/binance/binance-spot-api-docs/blob/master/rest-api.md
+This project deployed as a response to the user story and the techs which are included:
 
-## Tips:
-  - There is no rush to finish the project you have 1 week to finish it (you can ask for an extend if needed)
-  - The project should work and deliver the core features and we also consider clean code
-  - Please provide a good documentation
-  - We appreciate TDD
+* Spring Webflux
+* Apache Camel
+* Lombok
+* Docker and docker-compose
+* Mysql
+* mapstruct
 
-## How to deliver the project?
-Please fork this repo and send a pull request whenever you are done
+Base on user story we have 2 main apis which are:
+
+localhost:8888
+* GET /api/rates/history
+
+```curl --location --request GET 'localhost:8888/api/rates'```
+
+* GET /api/rates/history
+
+```curl --location --request GET 'localhost:8888/api/rates/history?startTime=0&endTime=9999999999999'```
+
+For detail and curls of api see http://localhost:8888/swagger-ui.html
+
+#### Debug
+* If project not started correctly because of database with error like this ```Could not create connection to database server. Attempted reconnect 3 times. Giving up.``` first start db docker-compose or run it manually then start project.
+* Because of Binance filtering it's necessary to run your anti filter.
+### Next step
+
+It is better to add CircuitBreaker (Spring Resilience4J) in order to better results and Prometheus to check health of apis. 
+
+
+
+
   
