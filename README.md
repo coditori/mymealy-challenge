@@ -31,6 +31,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Doc
 
-There is to component:
+There is two component:
 1. crypto: contain list of cryptos
 2. search: for search in cryptos list
