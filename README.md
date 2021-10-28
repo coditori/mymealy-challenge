@@ -4,12 +4,9 @@ Piter (Marketing guy) asked you to implement a cryptocurrency live pricing appli
 1. List of cryptos sorted by price
 2. A search widget to search on the list of cryptos (searching BTC returns all cryptos with BTC inside their name, like BTCUSDT, BTCETH, ...)
 
-Please use technology of your choice:
+Technology:
 - ReactJS>Next.js
 
-Data Source:
-	Take a look at the Binance API documentation link for more information about your source
-	https://github.com/binance/binance-spot-api-docs/blob/master/web-socket-streams.md#all-market-tickers-stream
 
 ## Getting Started
 
@@ -31,6 +28,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Doc
 
-There is two component:
+There are two components:
 1. crypto: contain list of cryptos
 2. search: for search in cryptos list
