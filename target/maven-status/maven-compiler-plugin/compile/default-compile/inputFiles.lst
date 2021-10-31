@@ -1,9 +1,0 @@
-/home/hamed/Desktop/mymealy-chalange/src/main/java/com/mymealy/mymealychalange/service/MarketPriceServiceImpl.java
-/home/hamed/Desktop/mymealy-chalange/src/main/java/com/mymealy/mymealychalange/MymealyChalangeApplication.java
-/home/hamed/Desktop/mymealy-chalange/src/main/java/com/mymealy/mymealychalange/config/SchedulingConfig.java
-/home/hamed/Desktop/mymealy-chalange/src/main/java/com/mymealy/mymealychalange/config/RestTemplateConfig.java
-/home/hamed/Desktop/mymealy-chalange/src/main/java/com/mymealy/mymealychalange/repository/MarketPriceRepository.java
-/home/hamed/Desktop/mymealy-chalange/src/main/java/com/mymealy/mymealychalange/controller/MarketPriceController.java
-/home/hamed/Desktop/mymealy-chalange/src/main/java/com/mymealy/mymealychalange/service/MarketPriceService.java
-/home/hamed/Desktop/mymealy-chalange/src/main/java/com/mymealy/mymealychalange/controller/advice/ExceptionHandler.java
-/home/hamed/Desktop/mymealy-chalange/src/main/java/com/mymealy/mymealychalange/repository/entity/MarketPrice.java
