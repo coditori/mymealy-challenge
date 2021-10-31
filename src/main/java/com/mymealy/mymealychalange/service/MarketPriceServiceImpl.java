@@ -35,10 +35,8 @@ public class MarketPriceServiceImpl implements MarketPriceService {
     @Override
     public void getPricesAndSaveInDb() throws Exception {
 
-        marketPriceRepository.save(new MarketPrice(null, "BTCUSDT", 62534558.65, LocalDateTime.now()));
         MarketPrice marketPrice = restTemplate.getForEntity("/api/v3/ticker/price?symbol=BTCUSDT", MarketPrice.class).getBody();
         marketPriceRepository.save(marketPrice);
-
 
     }
 }

@@ -1,9 +1,0 @@
-com/mymealy/mymealychalange/config/SchedulingConfig.class
-com/mymealy/mymealychalange/service/MarketPriceService.class
-com/mymealy/mymealychalange/controller/advice/ExceptionHandler.class
-com/mymealy/mymealychalange/MymealyChalangeApplication.class
-com/mymealy/mymealychalange/repository/MarketPriceRepository.class
-com/mymealy/mymealychalange/service/MarketPriceServiceImpl.class
-com/mymealy/mymealychalange/config/RestTemplateConfig.class
-com/mymealy/mymealychalange/controller/MarketPriceController.class
-com/mymealy/mymealychalange/repository/entity/MarketPrice.class
