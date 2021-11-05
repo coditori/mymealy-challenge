@@ -4,28 +4,30 @@ Piter (Marketing guy) asked you to implement a cryptocurrency live pricing appli
 1. List of cryptos sorted by price
 2. A search widget to search on the list of cryptos (searching BTC returns all cryptos with BTC inside their name, like BTCUSDT, BTCETH, ...)
 
-Please use technology of your choice:
-- If you are a web developer you can use: ReactJS/AngularJS/VueJS
+Technology:
+- ReactJS>Next.js
 
-Data Source:
-	Take a look at the Binance API documentation link for more information about your source
-	https://github.com/binance/binance-spot-api-docs/blob/master/web-socket-streams.md#all-market-tickers-stream
 
-## Back-End Challenge:
-We need to provide a RESTful API for front-ends to:
-- Get bitcoin-usd rate periodically (based on the config) then show the rate in the response of "rates" endpoint.
-- Return the rate history of specified coin "bitcoin-usd", It also needs to have "startTime", "endTime" as two filtered params.
+## Getting Started
 
-Data Source:
-	Take a look at the Binance API documentation link for more information about your source
-	https://github.com/binance/binance-spot-api-docs/blob/master/rest-api.md
+First, install:
 
-## Tips:
-  - There is no rush to finish the project you have 1 week to finish it (you can ask for an extend if needed)
-  - The project should work and deliver the core features and we also consider clean code
-  - Please provide a good documentation
-  - We appreciate TDD
+```bash
+yarn install
+```
 
-## How to deliver the project?
-Please fork this repo and send a pull request whenever you are done
-  
+
+Then, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Doc
+
+There are two components:
+1. crypto: contain list of cryptos
+2. search: for search in cryptos list
